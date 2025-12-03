@@ -3,130 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portafolio de Víctor</title>
+    <title>Mi Portafolio | Técnico en Sistemas Microinformáticos</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px; 
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+
+        /* Centrar sección de contacto */
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;            /* centra el contenedor en la página */
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;   /* alinea la sidebar y el formulario */
+            justify-content: center;   /* mantiene el bloque centrado */
+            padding: 40px 20px;
+        }
+        .contact-info-sidebar {
+            width: 260px;
+            flex-shrink: 0;
+        }
+        .contact-form-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;   /* centra el formulario dentro de su columna */
+        }
+        .contact-form {
+            width: 100%;
+            max-width: 560px;          /* ancho del formulario */
+        }
+
+        /* Mejoras visuales del formulario */
+        .contact-form .form-group { margin-bottom: 12px; }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        /* Responsive: apilar y ocultar sidebar en pantallas pequeñas */
+        @media (max-width: 800px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-info-sidebar { display: none; }
+            .contact-form { max-width: 100%; }
+        }
+
+        /* Centrar el container de contacto dentro de la sección */
+        #contacto {
+            display: flex;
+            justify-content: center; /* centra horizontalmente */
+            align-items: center;     /* centra verticalmente */
+            padding: 60px 20px;
+            min-height: 60vh;        /* ajustar altura para centrar verticalmente */
+            box-sizing: border-box;
+        }
+
+        /* En móviles, mantener apilado y que el contenido comience desde arriba */
+        @media (max-width: 800px) {
+            #contacto {
+                align-items: flex-start;
+                padding-top: 30px;
+                min-height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <!-- Header -->
     <header id="inicio">
-        <div class="banner">
-            <img src="info.jpg" alt="Imagen de fondo">
-            <div class="text-banner">
-                <h1>Hola, soy Víctor</h1>
-                <p>Bienvenidos a mi portafolio</p>
-            </div>
+        <div class="logo">
+            <img src="image (2).jpg" alt="VS" class="logo-img">
+            <span class="visually-hidden">VS</span>
         </div>
-        <!-- Menú de navegación -->
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#galeria">Galería de proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="hero-content">
+            <h1>Víctor Serrano</h1>
+            <p>Técnico en Sistemas Microinformáticos</p>
+        </div>
     </header>
 
-    <!-- Uso de cookies -->
-    <div id="cookies" class="cookie-banner">
-        <p>Este sitio usa cookies. <a href="#">Leer más</a></p>
-        <button id="close-cookie" onclick="closeCookie()">Aceptar</button>
-    </div>
-
-    <!-- Sección "Sobre mí" -->
     <section id="sobre-mi">
-        <div class="card">
-            <h2>Sobre mí</h2>
-            <p>Hola, soy Víctor, un apasionado desarrollador web con experiencia en diseño y programación. He estudiado en el colegio profesional sorolla y he trabajado en proyectos de diversas áreas como la creación de sitios web y aplicaciones.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/" class="social-icon"><img src="instagram.jpg" alt="Instagram"></a>
-                <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="social-icon"><img src="tiktok.png" alt="Tik Tok"></a>
-                <a href="https://x.com/?lang=es" class="social-icon"><img src="twitter.png" alt="Twitter"></a>
+        <h2>Sobre Mí</h2>
+        <div class="about-card animate">
+            <p>
+                Soy estudiante de 1º de ASIR  con una gran pasión por la tecnología, 
+                la ciberseguridad y el desarrollo web. Durante mi formación, he adquirido conocimientos sólidos en redes, 
+                administración de sistemas, bases de datos y programación.
+            </p>
+            <p>
+                Me destaco por mi capacidad de aprendizaje continuo, mi pensamiento analítico y mi habilidad para trabajar 
+                en equipo. He participado en diversos concursos y proyectos académicos que han reforzado mis competencias 
+                técnicas y mi compromiso con la excelencia profesional.
+            </p>
+            <p>
+                Mi objetivo es seguir desarrollándome en el ámbito de la informática, especialmente en áreas como la 
+                ciberseguridad, el desarrollo de aplicaciones web y la administración de sistemas.
+            </p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/victor-serrano-a18736398/" target="_blank" title="LinkedIn">in</a>
+                <a href="https://github.com/victorserra21" target="_blank" title="GitHub">GH</a>
+                <a href="https://x.com/" target="_blank" title="Twitter">X</a>
+                <a href="mail to:Victsero@gmail.com" title="Email">@</a>
             </div>
         </div>
     </section>
 
-    <!-- Galería de proyectos -->
-    <section id="galeria">
+    <section id="proyectos">
         <h2>Mis Proyectos</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <a href="proyecto 1.pdf" class="project-card"><img src="raid.jpg" alt="Proyecto 1"></a>
-                <h3>Sistemas Raid</h3>
-                <p>Tutorial de como crear y gestionar sistemas raid</p>
+            <div class="project-card animate">
+                <img src="cypher.png">
+                <div class="project-content">
+                    <h3>🥇 Ganador Hackathon de Ciberseguridad</h3>
+                    <p>
+                        Primer lugar en el hackathon de ciberseguridad donde desarrollamos soluciones innovadoras 
+                        para la detección de vulnerabilidades en sistemas web. Implementamos técnicas de pentesting 
+                        y análisis forense digital para identificar y mitigar amenazas de seguridad.
+                    </p>
+                </div>
             </div>
-            <div class="project-card">
-                <a href="dns.pdf" class="project-card"><img src="descarga.png" alt="Proyecto 2"></a>
-                <h3>Practica DNS</h3>
-                <p>Practica interactiva sobre el DNS</p>
-            </div>
-            <div class="project-card">
-                <a href="proyecto 3.pdf" class="project-card"><img src="filtro.png" alt="Proyecto 3"></a>
-                <h3>Redirección y Filtros</h3>
-                <p>Practica relacionada con la redirección y los filtros en Linux</p>
-            </div>
-            <div class="project-card">
-                <a href="proyecto 4.pdf" class="project-card"><img src="refrigeración.jpg" alt="Proyecto 4"></a>
-                <h3>Documentación sistemas de refrigeración</h3>
-                <p>Pequeña documentación sobre los sistemas de refrigeración y sistemas de regleta</p>
-            </div>
-            <div class="project-card">
-                <a href="proyecto 5.pdf" class="project-card"><img src="ip.jpg" alt="Proyecto 5"></a>
-                <h3>Ip Fija</h3>
-                <p>Tutorial de como realizar una ip fija</p>
-            </div>
-            <div class="project-card">
-                <a href="instalacion servidor.pdf" class="project-card"><img src="servidor.jpg" alt="Proyecto 6"></a>
-                <h3>Instalación del servidor</h3>
-                <p>Guia sobre como instalar el servidor</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Habilidades -->
+            <div class="project-card animate">
+                <img src="Image.png" alt="2º Premio Girls for STEM">
+                <div class="project-content">
+                    <h3>🥈 2º Premio Girls for STEM</h3>
+                    <p>
+                        Segundo puesto en el concurso Girls for STEM por el desarrollo de una aplicación educativa 
+                        que promueve las carreras STEM entre estudiantes. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card animate">
+                <img src="base de datos.png" alt="Proyecto Base de Datos">
+                <div class="project-content">
+                    <h3>Modelo Relacional de Base de Datos</h3>
+                    <p>
+                        Diseño completo de un modelo relacional para un sistema de gestión empresarial. 
+                        El proyecto incluye diseño conceptual, normalización hasta tercera forma normal (3FN), 
+                        creación de diagramas entidad-relación y definición de claves primarias y foráneas 
+                        para garantizar la integridad referencial.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card animate">
+                <img src="iso.png" alt="Proyecto ISO">
+                <div class="project-content">
+                    <h3>Responsable de Implementación ISO 27001</h3>
+                    <p>
+                        Participación como responsable en la implementación de un sistema de gestión de seguridad 
+                        de la información basado en la norma ISO 27001. Elaboración de políticas de seguridad, 
+                        evaluación de riesgos y documentación de procedimientos de control.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card animate">
+                <img src="html y css.jpg" alt="Proyecto Web HTML y CSS">
+                <div class="project-content">
+                    <h3>Proyecto Web con HTML y CSS</h3>
+                    <p>
+                        Creación de un sitio web completo utilizando HTML5 y CSS3 puro. El proyecto incluye 
+                        estructura semántica, diseño responsivo con media queries, animaciones y transiciones CSS, 
+                        sistema de navegación intuitivo y optimización para diferentes dispositivos sin frameworks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card animate">
+                <img src="pagina web.jpg" alt="Aplicación Web Responsiva">
+                <div class="project-content">
+                    <h3>Aplicación Web Responsiva</h3>
+                    <p>
+                        Desarrollo de una aplicación web completamente responsiva utilizando HTML5, CSS3 y JavaScript. 
+                     Optimización para diferentes dispositivos y navegadores con enfoque en accesibilidad.
+                    </p>
+                </div>
+            </section>
+
     <section id="habilidades">
         <h2>Habilidades y Conocimientos</h2>
-        <div class="skills">
-            <div class="skill">
-                <h3>HTML</h3>
-                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        <div class="skills-container">
+            <div class="skill animate">
+                <div class="skill-header">
+                    <span class="skill-name">HTML5</span>
+                    <span>90%</span>
+                </div>
+                <p class="skill-description">
+                    Dominio avanzado en estructura semántica, formularios, multimedia y accesibilidad web.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
             </div>
-            <div class="skill">
-                <h3>CSS</h3>
-                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+
+            <div class="skill animate">
+                <div class="skill-header">
+                    <span class="skill-name">CSS3</span>
+                    <span>85%</span>
+                </div>
+                <p class="skill-description">
+                    Diseño responsivo, Flexbox, Grid, animaciones y transiciones avanzadas.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
             </div>
-            <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+
+            <div class="skill animate">
+                <div class="skill-header">
+                    <span class="skill-name">Ciberseguridad</span>
+                    <span>80%</span>
+                </div>
+                <p class="skill-description">
+                    Conocimientos en pentesting, análisis de vulnerabilidades y seguridad en redes.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skill animate">
+                <div class="skill-header">
+                    <span class="skill-name">Bases de Datos - Modelo Relacional</span>
+                    <span>75%</span>
+                </div>
+                <p class="skill-description">
+                    Diseño de modelos relacionales, normalización, diagramas E-R y gestión de integridad referencial.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill animate">
+                <div class="skill-header">
+                    <span class="skill-name">Administración de Redes</span>
+                    <span>70%</span>
+                </div>
+                <p class="skill-description">
+                    Configuración de routers, switches, protocolos TCP/IP y troubleshooting de redes.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <div class="skill animate">
+                <div class="skill-header">
+                    <span class="skill-name">Desarrollo Web (HTML + CSS)</span>
+                    <span>85%</span>
+                </div>
+                <p class="skill-description">
+                    Creación de sitios web con HTML5 y CSS3, diseño responsivo y maquetación avanzada.
+                </p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Formulario de contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>¿Quieres contratarme? ¡Hablemos!</p>
-        <form action="#" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <div class="contact-container">
+            <div class="contact-info-sidebar">
+                <div class="info-item">
+                </div>
+            
+                <div class="info-item">
+                    
+                </div>
+            </div>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <!-- Pie de página -->
     <footer>
-        <p>© 2024 Víctor</p>
+        <p>© 2025 Víctor Serrano. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const skillsSection = document.getElementById('habilidades');
+            const skillBars = document.querySelectorAll('.skill-progress');
+            const sectionPos = skillsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+            
+            if(sectionPos < screenPos) {
+                skillBars.forEach(bar => {
+                    bar.style.width = bar.style.width;
+                });
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const mailtoLink = `mailto:Victsero@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent('Nombre: ' + nombre + '\nEmail: ' + email + '\n\nMensaje:\n' + mensaje)}`;
+            
+            window.location.href = mailtoLink;
+            
+            this.reset();
+        });
+    </script>
 </body>
 </html>
